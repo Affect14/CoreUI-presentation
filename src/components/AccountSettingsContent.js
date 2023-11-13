@@ -2,7 +2,7 @@ import React, { Suspense } from 'react'
 import { CContainer, CSpinner } from '@coreui/react'
 // routes config
 import routes from '../routes'
-import AccountSettingsComponent from 'src/views/AccountSettings/AccountSettingsComponent'
+import AccountSettingsComponent from 'src/views/Account/AccountInfoComponent'
 
 const AccountSettingsContent = () => {
   return (

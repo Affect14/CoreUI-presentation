@@ -17,7 +17,9 @@ const Register = React.lazy(() => import('./views/pages/register/Register'))
 const Page404 = React.lazy(() => import('./views/pages/page404/Page404'))
 const Page500 = React.lazy(() => import('./views/pages/page500/Page500'))
 const GlobalSettingsPage = React.lazy(() => import('./views/pages/settings/GlobalSettingsPage'))
-const AccountSettingsPage = React.lazy(()=> import('./views/pages/AccountsPage/AccountsPage'))
+const AccountInfoComponent = React.lazy(()=> import('./views/pages/AccountsPage/AccountsPage'))
+const AccountSettings = React.lazy(() => import('./views/pages/AccountsSettings/AccountsSettings'))
+const AccountHistory = React.lazy(() => import('./views/pages/AccountHistory/AccountHistory'))
 
 
 class App extends Component {
@@ -32,9 +34,9 @@ class App extends Component {
             <Route path="/500" name="Page 500" element={<Page500 />} />
             <Route path="*" name="Home" element={<DefaultLayout />} />
             <Route path="/globalSettings" name="Global Settings Page" element={<GlobalSettingsPage/>}/>
-            <Route path="/profile" name="Progile Page" element={<AccountSettingsPage/>}/>
-            <Route path="/profile/options" name="Progile Page" element={<AccountSettingsPage/>}/>
-            <Route path="/profile/history" name="Progile Page" element={<AccountSettingsPage/>}/>
+            <Route path="/profile" name="Progile Page" element={<AccountInfoComponent/>}/>
+            <Route path="/profile/options" name="Progile Page" element={<AccountSettings/>}/>
+            <Route path="/profile/history" name="Progile Page" element={<AccountHistory/>}/>
           </Routes>
         </Suspense>
       </HashRouter>

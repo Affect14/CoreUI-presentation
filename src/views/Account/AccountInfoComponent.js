@@ -3,10 +3,10 @@ import {
   CButtonGroup,
   CCard,
   CCardBody,
+  CCardTitle,
   CCol,
   CContainer,
   CHeader,
-  CLink,
   CRow,
 } from "@coreui/react";
 import Range from "../forms/range/Range";
@@ -15,15 +15,15 @@ const {
 } = require("../forms/checks-radios/ChecksRadios");
 const { default: Select } = require("../forms/select/Select");
 
-const AccountSettingsComponent = () => {
+const AccountInfoComponent = () => {
   return (
     <>
       <CContainer>
         <CRow className="justify-content-center">
           <CCol md={10} lg={7} xl={9}>
             <CCard className=" mx-4 mb-3">
-              <CHeader>Личные данные</CHeader>
               <CCardBody className="d-flex flex-column gap-1">
+                <CCardTitle>Личные данные</CCardTitle>
                 <CContainer>
                   Фамилия пользователя:&nbsp;
                   <span className="fw-bolder">Иван</span>
@@ -72,4 +72,4 @@ const AccountSettingsComponent = () => {
     </>
   );
 };
-export default AccountSettingsComponent;
+export default AccountInfoComponent;
